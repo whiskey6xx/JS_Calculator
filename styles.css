@@ -1,0 +1,98 @@
+/* this styling says: for everything, before everything, and after everything, set the box sizing, font, and font weight */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+}
+
+/* this styling set the margin and padding for the body to 0 and the background to a gradient */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #CBCE91FF, #EA738DFF);
+}
+
+/* this styling styles the grid container class for the calculator */
+
+.calculator-grid {
+    /* sets display to grid */
+    display: grid;
+    /* centers the content horizontally */
+    justify-content: center;
+    /* centers the content vertically */
+    align-content: center;
+    /*  sets the calulator height to 100 percent of the view height */
+    min-height: 100vh;
+    /* sets the grid columns to 4 100px columns */
+    grid-template-columns: repeat(4, 100px);
+    /* sets the grid rows to 5 100px rows and allows the result display to grow and adjust with the page */
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+/* Styles the buttons inside our grid container */
+
+.calculator-grid > button {
+    /* sets the cursor to only be a pointer */
+    cursor: pointer;
+    /* sets the font-size */
+    font-size: 2rem;
+    /* sets the border to 1px wide and white */
+    border: 1px, solid #FFFFFF;
+    /* removes default outline*/
+    outline: none;
+    /* sets background color of the button */
+    background-color: rbga(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+    /* sets the hover color for the button */
+    background-color: #a9a9a9;
+}
+
+/* sets the style for our two span-two buttons */
+
+.span-two {
+    /* spans the element over two columns */
+    grid-column: span 2;
+    /* sets font color */
+    color: #adf802;
+    /* set back ground color */
+    background-color: rbga(139, 0, 139, 0.8);
+}
+
+/* styles our output class */
+.output {
+    /* sets it so it spans all columns */
+    grid-column: 1 / -1;
+    /* sets the bg color */
+    background-color: rgba(0, 0, 0, 0.75);
+    /* sets to flex box */
+    display: flex;
+    /* aligns items to the end*/
+    align-items: flex-end;
+    /* places space around the content */
+    justify-content: space-around;
+    /* set the direction up to down */
+    flex-direction: column;
+    /* sets padding */
+    padding: 10px;
+    /* sets the word wrap to break if the screen is full */
+    word-wrap: break-word;
+    /* */
+    word-break: break-all;
+}
+
+
+/* styles the output previous number to be smaller then the current*/
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+/* style the current number */
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
