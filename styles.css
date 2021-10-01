@@ -11,7 +11,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #CBCE91FF, #EA738DFF);
+    background: linear-gradient(to left, #ff71ce, #01cdfe);
 }
 
 /* this styling styles the grid container class for the calculator */
@@ -39,16 +39,16 @@ body {
     /* sets the font-size */
     font-size: 2rem;
     /* sets the border to 1px wide and white */
-    border: 1px, solid #FFFFFF;
+    border: 1px, solid #fffb96;
     /* removes default outline*/
     outline: none;
     /* sets background color of the button */
-    background-color: rbga(255, 255, 255, 0.75);
+    background-color: #b967ff;
 }
 
 .calculator-grid > button:hover {
     /* sets the hover color for the button */
-    background-color: #a9a9a9;
+    background-color: #05ffa1;
 }
 
 /* sets the style for our two span-two buttons */
@@ -67,7 +67,7 @@ body {
     /* sets it so it spans all columns */
     grid-column: 1 / -1;
     /* sets the bg color */
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.50);
     /* sets to flex box */
     display: flex;
     /* aligns items to the end*/
